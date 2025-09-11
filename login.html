@@ -19,7 +19,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="relative overflow-hidden ">
+  <body class="relative overflow-hidden h-screen">
     <!-- circle -->
     <span
       class="w-48 h-48 lg:w-[635px] lg:h-[635px] rounded-full bg-[#F8F6EE] absolute -top-10 lg:-top-36 lg:-right-36 -right-10 -z-10"
@@ -51,7 +51,7 @@
                 class="w-2 top-1 right-0 h-2 rounded-full border border-white bg-red-600 absolute"
               ></span>
             </div>
-            <a
+            <a href="./profile.html"
               class="bg-[#EADDFF] rounded-full flex justify-center p-2 text-sm items-center"
               ><i class="fa-regular fa-user"></i
             ></a>
@@ -61,7 +61,7 @@
     </header>
 
     <main class=" flex items-center">
-      <section class="w-full">
+      <section class="w-full mt-28 lg:mt-48">
         <div class="w-10/12 mx-auto">
           <div class="flex flex-col items-center">
             <h1 class="text-3xl font-bold text-center mt-10 font-serif">
@@ -73,16 +73,17 @@
               <fieldset class="fieldset space-y-2">
                 <input
                   type="email"
-                  class="input w-full bg-[#F8F6EE]"
+                  class="input w-full focus:outline-none focus:ring-2 hover:border-transparent focus:ring-[#d2b48c] bg-[#F8F6EE]"
                   placeholder="Email"
                 />
                 <input
                   type="password"
-                  class="input w-full bg-[#F8F6EE]"
+                  class="input w-full focus:outline-none focus:ring-2 hover:border-transparent focus:ring-[#d2b48c] bg-[#F8F6EE]"
                   placeholder="Password"
                 />
 
-                <button class="btn bg-[#C7AE6A] text-white shadow-[#F8F6EE] shadow-sm">Login</button>
+                <button class="btn bg-[#C7AE6A] text-white shadow-[#C7AE6A] shadow-md border-none font-mono text-sm">Login</button>
+                <p class="text-[#AD8945] font-semibold">Remember me!</p>
               </fieldset>
             </div>
           </div>

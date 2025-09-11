@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <!-- tailwind n daisy cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/288dc013f9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="w-10/12 mx-auto">
+        <div class="flex justify-between items-center p-4">
+          <div>
+            <figure>
+              <img class="w-14 rounded-full" src="./fav.jpg" alt="Logo" />
+            </figure>
+          </div>
+          <!-- icons -->
+          <div class="flex gap-1 items-center">
+            <div class="relative text-xl">
+              <i class="fa-solid fa-bell"></i>
+              <span
+                class="w-2 top-1 right-0 h-2 rounded-full border border-white bg-red-600 absolute"
+              ></span>
+            </div>
+            <!-- <a
+              class="bg-[#EADDFF] rounded-full flex justify-center p-2 text-sm items-center"
+              ><i class="fa-regular fa-user"></i
+            ></a> -->
+            <details class="dropdown">
+              <summary class="btn btn-ghost m-1">
+                <a
+                  class="bg-[#EADDFF] rounded-full flex justify-center p-2 text-sm items-center"
+                  ><i class="fa-regular fa-user"></i
+                ></a>
+              </summary>
+              <ul
+                class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+              >
+                <li><a>Profile</a></li>
+                <li><a>Log out</a></li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="w-10/12 mx-auto mt-10">
+        <div>
+          <div class="space-y-3">
+            <h1 class="text-4xl font-bold">Profile</h1>
+            <p>Manage your account settings and preferences</p>
+          </div>
+
+          <!--centers profile icon  -->
+          <div class="flex justify-center items-center mt-10">
+            <div class="text-4xl rounded-full border px-4 py-3 text-gray-500">
+              <div>
+                <i class="fa-solid fa-user"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- personal details n account pass -->
+          <div class="flex justify-between flex-col lg:flex-row gap-10 mt-10">
+            <div class="flex-1">
+              <div class="flex justify-between items-center">
+                <p class="text-2xl font-semibold">Personal Details</p>
+                <p class="text-2xl">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </p>
+              </div>
+              <div class="mt-6 space-y-4 bg-[#FCFCFD] p-6 rounded-lg w-full">
+                <div class="grid lg:grid-cols-2 gap-3 w-full">
+                  <div class="w-full">
+                    <label>First name</label>
+                    <input
+                      type="text"
+                      placeholder="first name"
+                      class="input input-bordered w-full"
+                    />
+                  </div>
+                  <div class="w-full">
+                    <label>Last name</label>
+                    <input
+                      type="text"
+                      placeholder="last name"
+                      class="input w input-bordered w-full"
+                    />
+                  </div>
+                </div>
+                <label for="">Password</label>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="input w-full input-bordered"
+                />
+                <label for="">Phone</label>
+                <input
+                  type="tel"
+                  placeholder="Phone number"
+                  class="input w-full input-bordered"
+                />
+              </div>
+            </div>
+
+            <div class="flex-1 ">
+              <div class="flex justify-between items-center">
+                <p class="text-2xl font-semibold">Account Password</p>
+                <p class="text-2xl">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </p>
+              </div>
+              <div class="mt-6 space-y-4 bg-[#FCFCFD] p-6 rounded-lg">
+                <label for="">Old Password</label>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="input w-full input-bordered"
+                />
+                <label for="">New Password</label>
+                <input
+                  type="password"
+                  placeholder="new password"
+                  class="input w-full input-bordered"
+                />
+                <label for="">Confirm Password</label>
+                <input
+                  type="password"
+                  placeholder="confirm password"
+                  class="input w-full input-bordered"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
