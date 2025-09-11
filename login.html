@@ -14,37 +14,80 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- font awesome cdn -->
-     <script src="https://kit.fontawesome.com/288dc013f9.js" crossorigin="anonymous"></script>
-    
+    <script
+      src="https://kit.fontawesome.com/288dc013f9.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body class="relative overflow-hidden">
+  <body class="relative overflow-hidden ">
     <!-- circle -->
-    <span class="w-48 h-48 lg:w-[635px] lg:h-[635px] rounded-full bg-[#F8F6EE] absolute -top-10 lg:-top-36 lg:-right-36 -right-10 -z-10"></span>
-    <span class="w-48 h-48 lg:w-[700px] lg:h-[700px] rounded-full bg-white border-[#F8F6EE] border-2 absolute -top-10 lg:-top-44 lg:-right-44 -right-10 -z-20"></span>
+    <span
+      class="w-48 h-48 lg:w-[635px] lg:h-[635px] rounded-full bg-[#F8F6EE] absolute -top-10 lg:-top-36 lg:-right-36 -right-10 -z-10"
+    ></span>
+    <span
+      class="w-52 h-52 lg:w-[700px] lg:h-[700px] rounded-full bg-white border-[#F8F6EE] border-2 absolute -top-10 lg:-top-46 lg:-right-46 -right-10 -z-20"
+    ></span>
+    <!-- bottom-corner-left bg  -->
+    <span
+      class="w-48 h-48 lg:w-72 lg:h-72 border-[#F8F6EE] border-2 bg-white absolute -bottom-10 -left-10 -z-10"
+    ></span>
+    <span
+      class="rotate-45 bg-transparent w-48 h-48 lg:w-72 lg:h-72 border-[#F8F6EE] border-2 absolute -bottom-10 -left-10 -z-10"
+    ></span>
 
- 
     <header>
       <nav class="w-10/12 mx-auto">
-        <div class="flex justify-between items-center p-4 ">
+        <div class="flex justify-between items-center p-4">
           <div>
             <figure>
               <img class="w-14 rounded-full" src="./fav.jpg" alt="Logo" />
             </figure>
           </div>
           <!-- icons -->
-           <div class="flex gap-3 items-center ">
-                <div class="relative text-xl"><i class="fa-solid fa-bell"></i>
-                <span class="w-2 top-1 right-0 h-2 rounded-full border border-white bg-red-600 absolute"></span></div>
-                <a class="bg-[#EADDFF] rounded-full flex justify-center p-2 text-sm items-center"><i class="fa-regular fa-user"></i></a>
-           </div>
+          <div class="flex gap-3 items-center">
+            <div class="relative text-xl">
+              <i class="fa-solid fa-bell"></i>
+              <span
+                class="w-2 top-1 right-0 h-2 rounded-full border border-white bg-red-600 absolute"
+              ></span>
+            </div>
+            <a
+              class="bg-[#EADDFF] rounded-full flex justify-center p-2 text-sm items-center"
+              ><i class="fa-regular fa-user"></i
+            ></a>
+          </div>
         </div>
       </nav>
     </header>
 
-    <main>
-        <section>
-            
-        </section>
+    <main class=" flex items-center">
+      <section class="w-full">
+        <div class="w-10/12 mx-auto">
+          <div class="flex flex-col items-center">
+            <h1 class="text-3xl font-bold text-center mt-10 font-serif">
+              Login Here
+            </h1>
+            <p class="text-center p-3">Welcome back you’ve been missed!</p>
+
+            <div class="card-body md:w-8/12 w-10/12 lg:w-4/12 mx-auto">
+              <fieldset class="fieldset space-y-2">
+                <input
+                  type="email"
+                  class="input w-full bg-[#F8F6EE]"
+                  placeholder="Email"
+                />
+                <input
+                  type="password"
+                  class="input w-full bg-[#F8F6EE]"
+                  placeholder="Password"
+                />
+
+                <button class="btn bg-[#C7AE6A] text-white shadow-[#F8F6EE] shadow-sm">Login</button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
