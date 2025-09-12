@@ -12,29 +12,45 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <main class="bg-gray-400 ">
+    <main class="bg-gray-400">
       <section class="h-screen flex items-center justify-center">
         <!-- form input -->
-        <div class="bg-white rounded-md p-6">
-            <!-- image preview -->
-          <div>
-            <img id="input-image" src="" class="hidden" alt="input-img">
+        <div class="bg-white rounded-md p-6 text-center">
+          <!-- image preview -->
+          <div class="mb-4">
+            <img
+              id="input-image"
+              src=""
+              class="hidden mx-auto w-40 h-40 object-cover rounded-md"
+              alt="input-img"
+            />
           </div>
-          <label class="text-center text-xl font-semibold" for="">Upload image</label>
-          <input type="file" class="hidden" id="mainInput" onchange="showImage(event)" accept="image/*">
+
+          <!-- upload button -->
+          <label
+            for="mainInput"
+            class="btn btn-primary cursor-pointer"
+          >
+            Upload Image
+          </label>
+          <input
+            type="file"
+            class="hidden"
+            id="mainInput"
+            onchange="showImage(event)"
+            accept="image/*"
+          />
         </div>
       </section>
     </main>
+
     <script>
-      function showImage(event){
-        if(event.target.files.length > 0){
+      function showImage(event) {
+        if (event.target.files.length > 0) {
           let src = URL.createObjectURL(event.target.files[0]);
-          let preview = document.getElementById('input-image');
+          let preview = document.getElementById("input-image");
           preview.src = src;
-          preview.style.display = "block";
-          
-          const mainInput = document.getElementById('mainInput');
-          mainInput.classList.remove('hidden');
+          preview.classList.remove("hidden"); // make image visible
         }
       }
     </script>
