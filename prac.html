@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font-awesome kit -->
+     <script src="https://kit.fontawesome.com/288dc013f9.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main class="bg-gray-400 ">
+      <section class="h-screen flex items-center justify-center">
+        <!-- form input -->
+        <div class="bg-white rounded-md p-6">
+            <!-- image preview -->
+          <div class="flex justify-center items-center relative">
+            <img id="preview-image" src="" class="hidden w-40 h-auto" alt="input-img">
+            <button onclick="removeImg()" id="remove-btn" class="text-xs hidden bg-red-500 text-white absolute top-1 right-1 px-2 py-1 rounded-full"><i class="fa-solid fa-x"></i></button>
+          </div>
+          <label class="text-center text-xl font-semibold" for="input-img">Upload image</label>
+          <input onchange="previewImg(event)" id="input-img" type="file" class="hidden" accept="image/*">
+        </div>
+      </section>
+    </main>
+    <script>
+    function previewImg(event){
+      if(event.target.files.length>0){
+        let preview = document.getElementById('preview-image');
+        let removeBtn = document.getElementById('remove-btn');
+        let inputImg = URL.createObjectURL(event.target.files[0]);
+        preview.src = inputImg;
+
+        preview.classList.remove("hidden");
+        removeBtn.classList.remove('hidden');
+      }
+    }
+
+    function removeImg(){
+      let preview = document.getElementById('preview-image');
+      let removeBtn = document.getElementById('remove-btn');
+      preview.classList.add('hidden');
+      preview.src = "";
+
+      removeBtn.classList.add('hidden')
+    }
+    </script>
+  </body>
+</html>
