@@ -17,9 +17,17 @@
       src="https://kit.fontawesome.com/288dc013f9.js"
       crossorigin="anonymous"
     ></script>
+
+    <style>
+      html,
+      body {
+        overflow-x: hidden !important;
+        transform: none !important;
+        overflow-y: scroll;
+      }
+    </style>
   </head>
-  <body class="relative">
-    
+  <body class="relative transform-none">
     <header>
       <nav class="w-10/12 mx-auto">
         <div class="flex justify-between items-center p-4">
@@ -30,7 +38,7 @@
           </div>
           <!-- icons -->
           <div class="flex gap-1 items-center">
-            <div class="drawer drawer-end">
+            <div class="drawer drawer-end transform-none">
               <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
               <div class="drawer-content">
                 <!-- Page content here -->
@@ -43,7 +51,7 @@
                   </div>
                 </label>
               </div>
-              <div class="drawer-side">
+              <div class="drawer-side fixed top-0 right-0">
                 <label
                   for="my-drawer-4"
                   aria-label="close sidebar"
@@ -55,21 +63,24 @@
                   <!-- Sidebar content here -->
                   <p class="text-xl font-semibold mb-3">Notificaitons</p>
                   <div class="flex gap-2 items-center">
-                    <div class=" flex items-center gap-1">
-                        <div class="w-2 h-2 bg-green-700 rounded-full"></div>
-                      <div
-                        class="w-10 rounded-full"
-                      >
+                    <div class="flex items-center gap-1">
+                      <div class="w-2 h-2 bg-green-700 rounded-full"></div>
+                      <div class="w-10 rounded-full">
                         <img
-                        class="rounded-full border-2 border-gray-800"
+                          class="rounded-full border-2 border-gray-800"
                           src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp"
                         />
                       </div>
                     </div>
                     <div class="flex flex-col">
-                        <p><span class="font-bold">Peter</span> commented in your photo</p>
-                    <span class="text-xs text-gray-500">11 hrs ago</span>
-                    <span class="text-xs text-gray-500"><i class="fa-solid fa-user"></i> Assigned to</span>
+                      <p>
+                        <span class="font-bold">Peter</span> commented in your
+                        photo
+                      </p>
+                      <span class="text-xs text-gray-500">11 hrs ago</span>
+                      <span class="text-xs text-gray-500"
+                        ><i class="fa-solid fa-user"></i> Assigned to</span
+                      >
                     </div>
                   </div>
                 </ul>
@@ -365,21 +376,15 @@
       </section>
     </main>
 
-    
-
-
-
-    
-
     <script>
-      function notifications(){
-        let notifications = document.getElementById('notificationSec');
-        notifications.classList.remove('hidden');
+      function notifications() {
+        let notifications = document.getElementById("notificationSec");
+        notifications.classList.remove("hidden");
       }
 
-      function removeNotifications(){
-        let notifications = document.getElementById('notificationSec');
-        notifications.classList.add('hidden');
+      function removeNotifications() {
+        let notifications = document.getElementById("notificationSec");
+        notifications.classList.add("hidden");
       }
     </script>
   </body>
