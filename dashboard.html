@@ -30,13 +30,50 @@
           </div>
           <!-- icons -->
           <div class="flex gap-1 items-center">
-            <div class="relative text-xl">
-              <button onclick="notifications()">
-                <i class="fa-solid fa-bell"></i>
-              <span
-                class="w-2 top-1 right-0 h-2 rounded-full border border-white bg-red-600 absolute"
-              ></span>
-              </button>
+            <div class="drawer drawer-end">
+              <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+              <div class="drawer-content">
+                <!-- Page content here -->
+                <label for="my-drawer-4" class="drawer-button btn btn-ghost">
+                  <div class="relative text-xl">
+                    <i class="fa-solid fa-bell"></i>
+                    <span
+                      class="w-2 top-1 right-0 h-2 rounded-full border border-white bg-red-600 absolute"
+                    ></span>
+                  </div>
+                </label>
+              </div>
+              <div class="drawer-side">
+                <label
+                  for="my-drawer-4"
+                  aria-label="close sidebar"
+                  class="drawer-overlay"
+                ></label>
+                <ul
+                  class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
+                >
+                  <!-- Sidebar content here -->
+                  <p class="text-xl font-semibold mb-3">Notificaitons</p>
+                  <div class="flex gap-2 items-center">
+                    <div class=" flex items-center gap-1">
+                        <div class="w-2 h-2 bg-green-700 rounded-full"></div>
+                      <div
+                        class="w-10 rounded-full"
+                      >
+                        <img
+                        class="rounded-full border-2 border-gray-800"
+                          src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp"
+                        />
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <p><span class="font-bold">Peter</span> commented in your photo</p>
+                    <span class="text-xs text-gray-500">11 hrs ago</span>
+                    <span class="text-xs text-gray-500"><i class="fa-solid fa-user"></i> Assigned to</span>
+                    </div>
+                  </div>
+                </ul>
+              </div>
             </div>
 
             <!-- <a
@@ -62,14 +99,14 @@
       </nav>
     </header>
 
-    <aside id="notificationSec" class="absolute top-0 p-5 bg-slate-500 right-0 h-screen lg:w-1/4 w-3/4 z-10 hidden">
+    <!-- <aside id="notificationSec" class="absolute top-0 p-5 duration-1000 transform transition transition-discrete ease-in-out  bg-slate-500 right-0 h-screen lg:w-1/4 w-3/4 z-10 hidden">
       <div class="flex justify-between items-center">
         <h1 class="font-semibold text-2xl">notifications here</h1>
         <button onclick="removeNotifications()" class="">X</button>
       </div>
-    </aside>
+    </aside> -->
 
-    <main class="w-10/12 mx-auto mt-10">
+    <main class="w-10/12 transform-none mx-auto mt-10">
       <section>
         <div>
           <h1 class="text-3xl font-bold mb-3">Admin Dashboard</h1>
