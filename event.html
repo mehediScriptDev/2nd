@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+
+    <!-- tailwind n daisy cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/288dc013f9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="w-10/12 mx-auto">
+      <section class="py-4">
+        <div>
+          <h1 class="text-3xl font-semibold font-serif">Event</h1>
+          <!-- image upload field -->
+          <div
+            class="bg-[#D9D9D9] flex justify-center items-center h-48 sm:h-64 lg:h-96 my-7"
+          >
+            <label
+              for="input-img"
+              class="lg:text-3xl font-semibold text-[#6B6B6B] font-serif"
+              >Add photos</label
+            >
+            <input id="input-img" type="file" class="hidden" accept="image/*" />
+          </div>
+
+          <div class="flex flex-col gap-y-3">
+            <div
+              class="flex gap-3 lg:flex-row flex-col justify-between items-center"
+            >
+              <div class="w-full">
+                <label class="font-serif text-xl" for="">Title</label>
+                <input
+                  class="p-2 rounded-sm w-full bg-[#F8F6EE] border-none"
+                  type="text"
+                  placeholder="type tile"
+                />
+              </div>
+              <div class="w-full">
+                <label class="font-serif text-xl " for="">Max person</label>
+                <input
+                  class="p-2 rounded-sm w-full bg-[#F8F6EE] border-none"
+                  type="text"
+                  placeholder="Enter max person"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="font-serif text-xl" for="">Description</label>
+              <textarea
+                name=""
+                placeholder="Enter Description"
+                class="p-2 h-48 rounded-sm w-full bg-[#F8F6EE] border-none"
+                id=""
+              ></textarea>
+            </div>
+
+            <!-- date time location input -->
+            <div  class="flex lg:justify-between flex-col items-center gap-3">
+              <div class="w-full">
+                <label class="font-serif text-xl" for="">Location</label>
+                <input
+                  class="p-2 rounded-sm w-full bg-[#F8F6EE] border-none"
+                  type="text"
+                  placeholder="Location"
+                />
+              </div>
+              <div class="flex w-full lg:flex-row gap-3 flex-col">
+                <div class="w-full">
+                  <label class="font-serif text-xl" for=""
+                    >Time</label
+                  >
+                  <input
+                    class="p-2 rounded-sm w-full bg-[#F8F6EE] border-none"
+                    type="time"
+                    placeholder="Time"
+                  />
+                </div>
+                <div class="w-full">
+                  <label class="font-serif text-xl " for=""
+                    >Date</label
+                  >
+                  <input
+                    class="p-2 rounded-sm w-full bg-[#F8F6EE] border-none"
+                    type="date"
+                    placeholder="Date"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
